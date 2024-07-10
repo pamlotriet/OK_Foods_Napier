@@ -86,8 +86,8 @@ Set up the following environment variables in the src/environments/environment.t
 ## Contact
 For any inquiries or feedback, please contact:
 
-Name: Pamela Lotriet
-Email: pamela.lotriet@gmail.com
-GitHub: pamlotriet
+- Name: Pamela Lotriet
+- Email: pamela.lotriet@gmail.com
+- GitHub: pamlotriet
 
 
