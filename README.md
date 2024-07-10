@@ -23,8 +23,8 @@ This Angular project is designed for OK Foods and Liquor Napier. It displays mon
 ## Installation
 
 ### Prerequisites
-- Node.js (>=14.x)
-- Angular CLI (>=12.x)
+- Node.js (=18.x)
+- Angular CLI (>=18.x)
 - Azure account for Blob Storage
 
 ### Steps
