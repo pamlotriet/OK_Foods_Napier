@@ -31,9 +31,15 @@ This Angular project is designed for OK Foods and Liquor Napier. It displays mon
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/okfoods-liquor-napier-specials.git
-2. cd ok-foods
-3. npm install
-4. ng serve
+2. Change directory
+    ```bash
+   cd ok-foods
+4. Install node modules
+   ```bash
+   npm install
+6. Start the application server
+   ```bash
+   ng serve
 
 ## Usage 
 
@@ -50,13 +56,14 @@ Ensure you have your Azure Blob Storage setup. Update the configuration settings
 
 ### Environment Variables
 Set up the following environment variables in the src/environments/environment.ts file:
-
-export const environment = {
-  production: false,
-  azureStorageAccount: 'your-azure-storage-account',
-  azureContainerName: 'your-container-name',
-  azureSasToken: 'your-sas-token'
-};
+```bash
+   export const environment = {
+     production: false,
+     azureStorageAccount: 'your-azure-storage-account',
+     azureContainerName: 'your-container-name',
+     azureSasToken: 'your-sas-token'
+   };
+```
 
 ### Prettier and ESLint
 1. This project uses Prettier and ESLint for code formatting and linting. To use these tools:
