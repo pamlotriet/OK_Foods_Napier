@@ -1,0 +1,108 @@
+{
+    "home": {
+        "card": {
+            "heading": {
+                "mainHeading": "Napier",
+                "foodSpecials": "Food Specials",
+                "liquorSpecials": "Liquor Specials",
+                "contact": "Contact Us"
+            },
+            "subHeading": {
+                "foodSpecialsSub": "View our food specials",
+                "liquorSpecialsSub": "View our liquor specials",
+                "contactSub": "Get in touch with us"
+            },
+            "buttons": {
+                "foodSpecials": "View",
+                "liquorSpecials": "View",
+                "contact": "Contact Us"
+            }
+        }
+    },
+    "foodSpecials": {
+        "heading": "OK Foods Napier Specials",
+        "subHeading": "Specials valid until 29 August 2024"
+    },
+    "alcSpecials": {
+        "heading": "OK Liquor Napier Specials",
+        "subHeading": "Specials valid until 29 August 2024"
+    },
+    "staff": {
+        "heading": "Meet Our Staff",
+        "subHeading": "Get a glimpse into the lives of our managing staff",
+        "owner": {
+            "name": "Lorinda Beauzec Burger",
+            "title": "(Owner)",
+            "info": "Lorinda Beauzec Burger has been passionately running our retail food store for over a decade. Her dedication to providing the freshest products and exceptional customer service has made our store a beloved part of the community. Lorinda's vision is to create a welcoming environment where everyone feels like family."
+        },
+        "manager": {
+            "name": "Placeholder Manager",
+            "title": "(Manager)",
+            "info": "Placeholder Manager brings years of experience in the retail industry, ensuring smooth operations and a friendly atmosphere for our customers. With a keen eye for detail and a commitment to excellence, Placeholder Manager is dedicated to making every shopping experience enjoyable and efficient."
+        }
+    },
+    "contact": {
+        "heading": "Contact Us",
+        "subHeading": "Please don't hesitate to reach out to us with any questions",
+        "tradingHeading": "Trading Hours",
+        "tradingHours": [
+            {
+                "day": "Monday",
+                "time": "08:00 - 17:00"
+            },
+            {
+                "day": "Tuesday",
+                "time": "08:00 - 17:00"
+            },
+            {
+                "day": "Wednesday",
+                "time": "08:00 - 17:00"
+            },
+            {
+                "day": "Thursday",
+                "time": "08:00 - 17:00"
+            },
+            {
+                "day": "Friday",
+                "time": "08:00 - 17:00"
+            },
+            {
+                "day": "Saturday",
+                "time": "08:00 - 19:00"
+            },
+            {
+                "day": "Sunday",
+                "time": "08:00 - 15:00"
+            },
+            {
+                "day": "Public Holidays",
+                "time": "08:00 - 15:00"
+            }
+        ],
+        "contactInfo": [
+            {
+                "icon": "pi pi-phone",
+                "text": "028 423 3855"
+            },
+            {
+                "icon": "pi pi-envelope",
+                "text": "1970@ok.co.za"
+            },
+            {
+                "icon": "pi pi-home",
+                "text": "69 Sarel Cilliers Street, Napier, South Africa, 7270"
+            }
+        ],
+        "button": {
+            "icon": "pi pi-chevron-right",
+            "text": "Directions"
+        }
+    },
+    "sidebar": {
+        "home": "Home",
+        "foodSpecials": "Food Specials",
+        "alcSpecials": "Liquor Specials",
+        "staff": "Staff",
+        "contact": "Contact"
+    }
+}

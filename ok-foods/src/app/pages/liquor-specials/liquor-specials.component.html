@@ -1,0 +1,12 @@
+<div class="flex p-16 flex-col pb-0">
+    <h1>{{'alcSpecials.heading' | translate}}</h1>
+    <h2>{{'alcSpecials.subHeading' | translate}}</h2>
+</div>
+
+<div class="grid gap-20 p-16 md:grid-cols-4">
+    @for (blob of blobUrls; track blob;) {
+    <app-card [style]="{'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}">
+        <img [src]="blob" class="shadow-none" alt="Image special unavailable">
+    </app-card>
+    }
+</div>

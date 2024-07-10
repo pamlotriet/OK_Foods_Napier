@@ -1,0 +1,37 @@
+@import "primeicons/primeicons.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    a {
+        @apply font-roboto;
+        @apply text-lg;
+    }
+
+    h1 {
+        @apply font-roboto;
+        @apply font-extrabold;
+        @apply text-3xl;
+        @apply text-green
+    }
+
+    h2 {
+        @apply font-roboto;
+        @apply text-sm;
+    }
+
+    h3 {
+        @apply font-roboto;
+        @apply text-xl;
+        @apply text-green;
+        @apply font-extrabold;
+    }
+
+    h4 {
+        @apply font-roboto;
+        @apply font-extrabold;
+    }
+}

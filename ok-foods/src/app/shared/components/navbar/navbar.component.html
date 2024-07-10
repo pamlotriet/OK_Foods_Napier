@@ -1,0 +1,11 @@
+<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
+<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
+<div class="grid grid-cols-2 w-screen h-fit p-4 pl-6 pr-6 shadow-md top-0 sticky z-10 bg-white">
+    <div class="flex flex-row col-span-1 items-center">
+        <img (click)="routeHome()" class="h-8 md:h-10 cursor-pointer" src="assets/images/logo.svg"
+            alt="Logo Unavailable">
+    </div>
+    <div class="flex flex-row-reverse items-center">
+        <app-side-bar></app-side-bar>
+    </div>
+</div>
