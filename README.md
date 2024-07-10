@@ -24,9 +24,15 @@ This Angular project is designed for OK Foods and Liquor Napier. It displays mon
 ### Prerequisites
 - Node.js (>=14.x)
 - Angular CLI (>=12.x)
+- Prettier
+- EsLint
+- Tailwind
 - Azure account for Blob Storage
 
 ### Steps
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/okfoods-liquor-napier-specials.git
+2. cd ok-foods-napier
+3. npm install
+4. ng serve
