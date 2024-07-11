@@ -100,8 +100,8 @@
     },
     "sidebar": {
         "home": "Home",
-        "foodSpecials": "Food Specials",
-        "alcSpecials": "Liquor Specials",
+        "foodSpecials": "Food specials",
+        "alcSpecials": "Liquor specials",
         "staff": "Staff",
         "contact": "Contact"
     }
