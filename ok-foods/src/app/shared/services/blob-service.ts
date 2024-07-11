@@ -1,38 +1,46 @@
-import { Injectable } from '@angular/core';
-import { BlobServiceClient } from '@azure/storage-blob';
+import { HttpClient } from '@angular/common/http';
+import { inject, Injectable } from '@angular/core';
+import { map, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class BlobService {
-  private accountName = 'okfoodsnapier';
+  http = inject(HttpClient);
 
-  async listBlobByNameBlobs(
-    imageName: string,
-    conatainerName: string,
-  ): Promise<string> {
-    const blobServiceClient = new BlobServiceClient(
-      `https://${this.accountName}.blob.core.windows.net`,
-    );
-    const containerClient =
-      blobServiceClient.getContainerClient(conatainerName);
-
-    const client = containerClient.getBlobClient(imageName).url;
-
-    return client;
+  getBlobByName(
+    containerUrl: string,
+    containerSas: string,
+    blobName: string,
+  ): Observable<string> {
+    const url = `${containerUrl}/${blobName}?${containerSas}`;
+    return this.http
+      .get(url, { responseType: 'text' })
+      .pipe(map(() => `${containerUrl}/${blobName}?${containerSas}`));
   }
 
-  async listfoodBlobs(containerName: string): Promise<string[]> {
-    const blobServiceClient = new BlobServiceClient(
-      `https://${this.accountName}.blob.core.windows.net`,
-    );
-    const containerClient = blobServiceClient.getContainerClient(containerName);
+  listBlobs(containerUrl: string, containerSas: string): Observable<string[]> {
+    const url = `${containerUrl}?restype=container&comp=list&${containerSas}`;
+    return this.http
+      .get(url, { responseType: 'text' })
+      .pipe(
+        map((response) =>
+          this.parseBlobList(response, containerUrl, containerSas),
+        ),
+      );
+  }
 
-    const blobUrls: string[] = [];
-    for await (const blob of containerClient.listBlobsFlat()) {
-      const blobUrl = `${containerClient.url}/${blob.name}`;
-      blobUrls.push(blobUrl);
-    }
-    return blobUrls;
+  private parseBlobList(
+    xml: string,
+    containerUrl: string,
+    containerSas: string,
+  ): string[] {
+    const parser = new DOMParser();
+    const xmlDoc = parser.parseFromString(xml, 'text/xml');
+    const blobs = Array.from(xmlDoc.getElementsByTagName('Blob'));
+    return blobs.map(
+      (blob) =>
+        `${containerUrl}/${blob.getElementsByTagName('Name')[0].textContent}?${containerSas}`,
+    );
   }
 }

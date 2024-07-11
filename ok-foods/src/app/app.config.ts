@@ -3,8 +3,6 @@ import {
   importProvidersFrom,
   provideZoneChangeDetection,
 } from '@angular/core';
-import { provideRouter } from '@angular/router';
-
 import { routes } from './app.routes';
 import {
   provideHttpClient,
@@ -15,6 +13,7 @@ import { provideClientHydration } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { CustomTranslateLoader } from './shared/translators/translate-loader';
+import { provideRouter } from '@angular/router';
 
 export const appConfig: ApplicationConfig = {
   providers: [
