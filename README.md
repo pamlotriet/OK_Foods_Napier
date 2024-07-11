@@ -58,10 +58,17 @@ Ensure you have your Azure Blob Storage setup. Update the configuration settings
 Set up the following environment variables in the src/environments/environment.ts file:
 ```bash
    export const environment = {
-     production: false,
-     azureStorageAccount: 'your-azure-storage-account',
-     azureContainerName: 'your-container-name',
-     azureSasToken: 'your-sas-token'
+      foodSpecialsSas:'your-food-specials-image-container-sas',
+      foodSpecialsUrl: 'your-food-specials-image-container-url',
+      liquorSpecialsSas: 'your-liquor-specials-image-container-sas',
+      liquorSpecialsUrl: 'your-liquor-specials-image-container-url',
+      generalSas: 'your-general-image-container-sas',
+      generalUrl: 'your-general-image-container-url',
+      ownerName: 'your-owner-image-name',
+      managerName: 'your-manager-image-name',
+      foodImageName: 'foodCard.svg',
+      liquorImageName: 'alcCard.svg',
+      contactImageName: 'contactCard.svg',
    };
 ```
 
