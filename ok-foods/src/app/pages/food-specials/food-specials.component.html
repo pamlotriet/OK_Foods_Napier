@@ -48,7 +48,7 @@
 </div>
 }
 @if(viewAll && viewAllAlc){
-<div class="grid gap-20 p-16 md:grid-cols-4">
+<div class="grid gap-20 p-16 md:grid-cols-5">
     @for (blob of alcUrls; track blob;) {
     <app-card [style]="{'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}">
         <img [src]="blob" class="shadow-none" [alt]="'imageAlt' | translate">
