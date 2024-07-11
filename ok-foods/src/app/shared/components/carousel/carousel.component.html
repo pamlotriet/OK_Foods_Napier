@@ -1,0 +1,12 @@
+<p-carousel [value]="products" [numVisible]="3" [numScroll]="3" [circular]="true" [numVisible]="5"
+    [responsiveOptions]="responsiveOptions">
+    <ng-template let-product pTemplate="item">
+        <div class="border-1 surface-border border-round m-2 p-3 shadow-md">
+            <div class="mb-3">
+                <div class="relative mx-auto">
+                    <img [src]="product" alt="Image unavailable" />
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</p-carousel>
