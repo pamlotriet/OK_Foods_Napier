@@ -66,9 +66,9 @@ Set up the following environment variables in the src/environments/environment.t
       generalUrl: 'your-general-image-container-url',
       ownerName: 'your-owner-image-name',
       managerName: 'your-manager-image-name',
-      foodImageName: 'foodCard.svg',
-      liquorImageName: 'alcCard.svg',
-      contactImageName: 'contactCard.svg',
+      foodImageName: 'your-food-card-image-name',
+      liquorImageName: 'your-liquor-card-image-name',
+      contactImageName: 'your-contact-card-image-name',
    };
 ```
 
