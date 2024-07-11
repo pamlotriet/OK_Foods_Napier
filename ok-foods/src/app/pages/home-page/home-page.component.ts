@@ -50,27 +50,8 @@ export class HomePageComponent implements OnInit {
       });
   }
 
-  // async ngOnInit(): Promise<void> {
-  //   this.imageUrlLiquor = await this.blobService.listBlobByNameBlobs(
-  //     'alcCard.svg',
-  //     'general-images',
-  //   );
-  //   this.imageUrlFoods = await this.blobService.listBlobByNameBlobs(
-  //     'foodCard.svg',
-  //     'general-images',
-  //   );
-  //   this.imageUrlContact = await this.blobService.listBlobByNameBlobs(
-  //     'contactCard.svg',
-  //     'general-images',
-  //   );
-  // }
-
   routeToFoodSpecials() {
     this.router.navigate(['/food-specials']);
-  }
-
-  routeToLiquorSpecials() {
-    this.router.navigate(['/liquor-specials']);
   }
 
   routeToContact() {

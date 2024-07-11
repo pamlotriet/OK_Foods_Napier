@@ -69,6 +69,7 @@ Set up the following environment variables in the src/environments/environment.t
       foodImageName: 'your-food-card-image-name',
       liquorImageName: 'your-liquor-card-image-name',
       contactImageName: 'your-contact-card-image-name',
+      logoName: 'logo.svg',
    };
 ```
 

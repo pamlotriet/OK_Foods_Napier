@@ -34,4 +34,11 @@
         @apply font-roboto;
         @apply font-extrabold;
     }
+
+    h5 {
+        @apply font-roboto;
+        @apply text-2xl;
+        @apply text-red;
+        @apply font-extrabold;
+    }
 }

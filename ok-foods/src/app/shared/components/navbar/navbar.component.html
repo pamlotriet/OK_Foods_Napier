@@ -3,8 +3,7 @@
 @if (isMobile) {
 <div class="grid grid-cols-2 w-screen h-fit p-4 pl-6 pr-6 shadow-md top-0 sticky z-10 bg-white">
     <div class="flex flex-row col-span-1 items-center">
-        <img (click)="routeHome()" class="h-8 md:h-10 cursor-pointer" src="assets/images/logo.svg"
-            alt="Logo Unavailable">
+        <img (click)="routeHome()" class="h-8 md:h-10 cursor-pointer" [src]="imageUrl" [alt]="'imageAlt' | translate">
     </div>
     <div class="flex flex-row-reverse items-center">
         <app-side-bar></app-side-bar>
@@ -28,10 +27,6 @@
                 <li class="m-2 p-1">
                     <a routerLinkActive="border-b-4 border-green" routerLink="/food-specials">{{'sidebar.foodSpecials' |
                         translate}}</a>
-                </li>
-                <li class="m-2 p-1">
-                    <a routerLinkActive="border-b-4 border-green" routerLink="/liquor-specials">{{'sidebar.alcSpecials'
-                        | translate}}</a>
                 </li>
                 <li class="m-2 p-1">
                     <a routerLinkActive="border-b-4 border-green" routerLink="/staff">{{'sidebar.staff' |

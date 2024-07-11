@@ -21,11 +21,11 @@
     },
     "foodSpecials": {
         "heading": "OK Foods Napier Specials",
-        "subHeading": "Specials valid until 29 August 2024"
-    },
-    "alcSpecials": {
-        "heading": "OK Liquor Napier Specials",
-        "subHeading": "Specials valid until 29 August 2024"
+        "subHeading": "Specials valid until 29 August 2024",
+        "back":"Back",
+        "viewAll":"View All",
+        "foodSpecials": "Food Specials",
+        "liquorSpecials":"Liquor Specials"
     },
     "staff": {
         "heading": "Meet Our Staff",
@@ -100,9 +100,9 @@
     },
     "sidebar": {
         "home": "Home",
-        "foodSpecials": "Food specials",
-        "alcSpecials": "Liquor specials",
+        "foodSpecials": "Specials",
         "staff": "Staff",
         "contact": "Contact"
-    }
+    },
+    "imageAlt": "Image Unavailable"
 }

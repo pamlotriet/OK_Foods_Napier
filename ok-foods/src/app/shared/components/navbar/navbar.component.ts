@@ -1,7 +1,9 @@
-import { Component, HostListener, inject } from '@angular/core';
+import { Component, HostListener, inject, OnInit } from '@angular/core';
 import { SideBarComponent } from '../side-bar/side-bar.component';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { environment } from '../../../../envitonments/environment';
+import { BlobService } from '../../services/blob-service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,10 +12,25 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
   router = inject(Router);
+  azureBlobService = inject(BlobService);
+
+  imageUrl = '';
+
+  private containerUrl = environment.generalUrl;
+  private containerSas = environment.generalSas;
+  private logoName = environment.logoName;
 
   isMobile = false;
+
+  ngOnInit(): void {
+    this.azureBlobService
+    .getBlobByName(this.containerUrl, this.containerSas, this.logoName)
+    .subscribe((url) => {
+      this.imageUrl = url;
+    });
+  }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {

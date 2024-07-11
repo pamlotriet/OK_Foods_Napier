@@ -8,7 +8,7 @@
             <app-card class="w-full md:w-515 h-496"
                 [style]="{'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}">
                 <div class="flex flex-col justify-center items-center">
-                    <img [src]="ownerUrl" alt="Owner Image Unavailable" class="rounded-full h-52 mb-8">
+                    <img [src]="ownerUrl" [alt]="'imageAlt' | translate" class="rounded-full h-52 mb-8">
                     <h3>{{'staff.owner.name' | translate}}</h3>
                     <h2>{{'staff.owner.title' | translate}}</h2>
                 </div>
@@ -19,7 +19,7 @@
             <app-card class="w-full md:w-515 h-496"
                 [style]="{'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}">
                 <div class="flex flex-col justify-center items-center">
-                    <img [src]="managerUrl" alt="Manager Image Unavailable" class="rounded-full max-h-52 mb-8">
+                    <img [src]="managerUrl" [alt]="'imageAlt' | translate" class="rounded-full max-h-52 mb-8">
                     <h3>{{'staff.manager.name' | translate}}</h3>
                     <h2>{{'staff.manager.title' | translate}}</h2>
                 </div>
