@@ -1,18 +1,18 @@
-<div class="flex p-16 flex-col pb-0">
-    <h1>{{'contact.heading' | translate}}</h1>
-    <h2>{{'contact.subHeading' | translate}}</h2>
+<div class="flex p-4 md:p-16 flex-col pb-0">
+    <h1 class="text-lg md:text-2xl">{{'contact.heading' | translate}}</h1>
+    <h2 class="text-md md:text-xl">{{'contact.subHeading' | translate}}</h2>
 </div>
-<div class="flex flex-row p-16 pt-4 w-screen justify-start items-start flex-wrap">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
-        <div class="flex justify-center items-center p-8 pl-0 w-full">
-            <app-card class="w-full h-496"
+<div class="flex flex-col md:flex-row p-4 md:p-16 pt-4 w-full justify-start items-start">
+    <div class="grid grid-cols-1 gap-8 w-full">
+        <div class="flex justify-center items-center p-4 md:p-8 md:pl-0 w-full">
+            <app-card class="w-full md:w-96 h-auto md:h-496"
                 [style]="{'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}"
                 [header]="'contact.heading' | translate">
                 <ul class="flex flex-col">
                     @for (item of sContactContent(); track item) {
                     <li class="p-2 flex flex-row items-center">
-                        <i [class]="item.icon" class="text-2xl pr-4"></i>
-                        <h4>{{item.text}} </h4>
+                        <i [class]="item.icon" class="text-xl md:text-2xl pr-4"></i>
+                        <h4 class="text-sm md:text-base">{{item.text}} </h4>
                     </li>
                     }
                     <div class="flex mt-4">
@@ -23,17 +23,16 @@
                 </ul>
             </app-card>
         </div>
-        <div class="flex justify-center items-center p-8 w-full">
-            <app-card [header]="'contact.tradingHeading' | translate" class="w-full  h-496"
+        <div class="flex justify-center items-center p-4 md:p-8 w-full">
+            <app-card [header]="'contact.tradingHeading' | translate" class="w-full md:w-96 h-auto md:h-496"
                 [style]="{'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}">
                 <ul class="flex flex-col">
                     @for (timestamp of sTradingHourContent(); track timestamp) {
                     <div class="flex flex-row">
                         <li class="p-2 flex flex-row">
-                            <h4>{{timestamp.day}} </h4>: {{timestamp.time}}
+                            <h4 class="text-sm md:text-base">{{timestamp.day}} </h4>: {{timestamp.time}}
                         </li>
                     </div>
-
                     }
                 </ul>
             </app-card>

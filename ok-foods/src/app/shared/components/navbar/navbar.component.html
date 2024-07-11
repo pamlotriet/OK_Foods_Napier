@@ -13,11 +13,11 @@
 <div class="grid grid-cols-2 w-screen h-fit p-4 pl-6 pr-6 shadow-md top-0 sticky z-10 bg-white">
     <div class="flex flex-row col-span-1 items-center">
         <div class="flex flex-row col-span-1 items-center">
-            <img (click)="routeHome()" class="h-8 md:h-10 cursor-pointer" src="assets/images/logo.svg"
-                alt="Logo Unavailable">
+            <img (click)="routeHome()" class="h-8 md:h-10 cursor-pointer" [src]="imageUrl"
+                [alt]="'imageAlt' | translate">
         </div>
     </div>
-    <div class="flex col-span-1 items-center font-medium font-roboto">
+    <div class=" flex col-span-1 items-center font-medium font-roboto">
         <div class="flex flex-row-reverse items-center w-full">
             <ul class="flex flex-row">
                 <li class="m-2 p-1">
