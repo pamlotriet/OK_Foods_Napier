@@ -30,7 +30,9 @@ jobs:
         run: npm install
 
       - name: Generate Environment File
-        run: node generate-env.js
+        run: |
+          cd ok-foods
+          node ../generate-env.js
         env:
           NODE_ENV: production
           FOOD_SPECIALS_SAS: ${{ secrets.FOOD_SPECIALS_SAS }}
