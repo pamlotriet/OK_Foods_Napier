@@ -57,7 +57,7 @@ jobs:
 
       - name: List Build Output
         run: |
-          cd ok-foods/dist/ok-foods
+          cd ok-foods/dist/ok-foods/browser
           ls -la
 
       - name: Build And Deploy
