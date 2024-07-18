@@ -1,5 +1,5 @@
 <!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
-<div class="flex p-8 md:p-16 flex-col pb-0">
+<div class="flex p-4 md:p-16 flex-col pb-0 w-full">
   @if (viewAll) {
     <div
       class="flex w-full flex-row pb-2 cursor-pointer items-center"
@@ -14,10 +14,10 @@
   <h2>{{ "foodSpecials.subHeading" | translate }}</h2>
 </div>
 @if (!viewAll) {
-  <div class="w-full p-8 md:p-16">
-    <div class="grid grid-cols-2 gap-4 mt-2 mb-2">
+  <div class="w-full p-4 md:p-16">
+    <div class="grid grid-cols-3 gap-4 mt-2 mb-2">
       <div
-        class="flex w-full flex-row pb-2 md:pl-16 cursor-pointer items-center"
+        class="flex w-full flex-row pb-2 md:pl-16 col-span-2 cursor-pointer items-center"
       >
         <h5 class="pr-2">{{ "foodSpecials.foodSpecials" | translate }}</h5>
       </div>
@@ -30,11 +30,13 @@
         <h2 class="pr-2">{{ "foodSpecials.viewAll" | translate }}</h2>
       </div>
     </div>
-    <div class="flex mb-16">
+    <div class="flex flex-col mb-16">
       <app-carousel [products]="foodUrls"></app-carousel>
     </div>
-    <div class="grid grid-cols-2 gap-4 mt-2 mb-2">
-      <div class="flex flex-row pb-2 cursor-pointer items-center md:pl-16">
+    <div class="grid grid-cols-3 gap-4 mt-2 mb-2">
+      <div
+        class="flex flex-row pb-2 col-span-2 cursor-pointer items-center md:pl-16"
+      >
         <h5 class="pr-2">{{ "foodSpecials.liquorSpecials" | translate }}</h5>
       </div>
       <div
@@ -46,7 +48,7 @@
         <h2 class="pr-2">{{ "foodSpecials.viewAll" | translate }}</h2>
       </div>
     </div>
-    <div class="flex mb-16">
+    <div class="flex flex-col mb-16">
       <app-carousel [products]="alcUrls"></app-carousel>
     </div>
   </div>
@@ -54,7 +56,7 @@
 
 @if (viewAll && viewAllFood) {
   <div
-    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-8 md:p-16"
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4 md:p-16"
   >
     @for (blob of foodUrls; track blob) {
       <app-card
@@ -76,7 +78,7 @@
 
 @if (viewAll && viewAllAlc) {
   <div
-    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-8 md:p-16"
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4 md:p-16"
   >
     @for (blob of alcUrls; track blob) {
       <app-card
