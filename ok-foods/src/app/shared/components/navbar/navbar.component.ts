@@ -26,10 +26,10 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.azureBlobService
-    .getBlobByName(this.containerUrl, this.containerSas, this.logoName)
-    .subscribe((url) => {
-      this.imageUrl = url;
-    });
+      .getBlobByName(this.containerUrl, this.containerSas, this.logoName)
+      .subscribe((url) => {
+        this.imageUrl = url;
+      });
   }
 
   @HostListener('window:resize', ['$event'])

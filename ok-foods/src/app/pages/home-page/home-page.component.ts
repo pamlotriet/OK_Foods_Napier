@@ -6,7 +6,6 @@ import { BlobService } from '../../shared/services/blob-service';
 import { Router } from '@angular/router';
 import { environment } from '@environments/environment';
 
-
 @Component({
   selector: 'app-home-page',
   standalone: true,

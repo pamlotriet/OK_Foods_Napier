@@ -1,62 +1,97 @@
 <!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
 <div class="flex p-8 md:p-16 flex-col pb-0">
-    @if (viewAll) {
-    <div class="flex w-full flex-row pb-2 cursor-pointer items-center" (click)="toggleViewAll('')"
-        (keyup)="toggleViewAll('')">
-        <i class="pi pi-chevron-left text-xs"></i>
-        <h4 class="pl-2">{{'foodSpecials.back' | translate}}</h4>
+  @if (viewAll) {
+    <div
+      class="flex w-full flex-row pb-2 cursor-pointer items-center"
+      (click)="toggleViewAll('')"
+      (keyup)="toggleViewAll('')"
+    >
+      <i class="pi pi-chevron-left text-xs"></i>
+      <h4 class="pl-2">{{ "foodSpecials.back" | translate }}</h4>
     </div>
-    }
-    <h1>{{'foodSpecials.heading' | translate}}</h1>
-    <h2>{{'foodSpecials.subHeading' | translate}}</h2>
+  }
+  <h1>{{ "foodSpecials.heading" | translate }}</h1>
+  <h2>{{ "foodSpecials.subHeading" | translate }}</h2>
 </div>
-@if(!viewAll) {
-<div class="w-full p-8 md:p-16">
+@if (!viewAll) {
+  <div class="w-full p-8 md:p-16">
     <div class="grid grid-cols-2 gap-4 mt-2 mb-2">
-        <div class="flex w-full flex-row pb-2 md:pl-16 cursor-pointer items-center">
-            <h5 class="pr-2">{{'foodSpecials.foodSpecials' | translate}}</h5>
-        </div>
-        <div class="flex w-full flex-row-reverse pb-2 cursor-pointer items-center md:pr-16"
-            (click)="toggleViewAll('food')" (keyup)="toggleViewAll('food')">
-            <i class="pi pi-chevron-right text-xs"></i>
-            <h2 class="pr-2">{{'foodSpecials.viewAll' | translate}}</h2>
-        </div>
+      <div
+        class="flex w-full flex-row pb-2 md:pl-16 cursor-pointer items-center"
+      >
+        <h5 class="pr-2">{{ "foodSpecials.foodSpecials" | translate }}</h5>
+      </div>
+      <div
+        class="flex w-full flex-row-reverse pb-2 cursor-pointer items-center md:pr-16"
+        (click)="toggleViewAll('food')"
+        (keyup)="toggleViewAll('food')"
+      >
+        <i class="pi pi-chevron-right text-xs"></i>
+        <h2 class="pr-2">{{ "foodSpecials.viewAll" | translate }}</h2>
+      </div>
     </div>
     <div class="flex mb-16">
-        <app-carousel [products]="foodUrls"></app-carousel>
+      <app-carousel [products]="foodUrls"></app-carousel>
     </div>
     <div class="grid grid-cols-2 gap-4 mt-2 mb-2">
-        <div class="flex  flex-row pb-2 cursor-pointer items-center md:pl-16">
-            <h5 class="pr-2">{{'foodSpecials.liquorSpecials' | translate}}</h5>
-        </div>
-        <div class="flex  flex-row-reverse pb-2 cursor-pointer items-center md:pr-16" (click)="toggleViewAll('alc')"
-            (keyup)="toggleViewAll('alc')">
-            <i class="pi pi-chevron-right text-xs"></i>
-            <h2 class="pr-2">{{'foodSpecials.viewAll' | translate}}</h2>
-        </div>
+      <div class="flex flex-row pb-2 cursor-pointer items-center md:pl-16">
+        <h5 class="pr-2">{{ "foodSpecials.liquorSpecials" | translate }}</h5>
+      </div>
+      <div
+        class="flex flex-row-reverse pb-2 cursor-pointer items-center md:pr-16"
+        (click)="toggleViewAll('alc')"
+        (keyup)="toggleViewAll('alc')"
+      >
+        <i class="pi pi-chevron-right text-xs"></i>
+        <h2 class="pr-2">{{ "foodSpecials.viewAll" | translate }}</h2>
+      </div>
     </div>
     <div class="flex mb-16">
-        <app-carousel [products]="alcUrls"></app-carousel>
+      <app-carousel [products]="alcUrls"></app-carousel>
     </div>
-</div>
+  </div>
 }
 
-@if(viewAll && viewAllFood) {
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-8 md:p-16">
+@if (viewAll && viewAllFood) {
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-8 md:p-16"
+  >
     @for (blob of foodUrls; track blob) {
-    <app-card [style]="{'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}">
-        <img [src]="blob" class="shadow-none" [alt]="'imageAlt' | translate">
-    </app-card>
+      <app-card
+        [style]="{
+          'box-shadow':
+            '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+        }"
+      >
+        <img
+          [src]="blob"
+          class="shadow-none"
+          [alt]="'imageAlt' | translate"
+          loading="lazy"
+        />
+      </app-card>
     }
-</div>
+  </div>
 }
 
-@if(viewAll && viewAllAlc) {
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-8 md:p-16">
+@if (viewAll && viewAllAlc) {
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-8 md:p-16"
+  >
     @for (blob of alcUrls; track blob) {
-    <app-card [style]="{'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}">
-        <img [src]="blob" class="shadow-none" [alt]="'imageAlt' | translate">
-    </app-card>
+      <app-card
+        [style]="{
+          'box-shadow':
+            '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+        }"
+      >
+        <img
+          [src]="blob"
+          class="shadow-none"
+          [alt]="'imageAlt' | translate"
+          loading="lazy"
+        />
+      </app-card>
     }
-</div>
+  </div>
 }

@@ -1,46 +1,100 @@
-<div class=" md:fixed grid grid-cols-1 md:grid-cols-3 justify-center items-center h-screen p-12 pt-0">
-    <div class="flex justify-center items-center p-4 md:p-16">
-        <app-card [header]="'home.card.heading.foodSpecials' | translate"
-            [subHeading]="'home.card.subHeading.foodSpecialsSub' | translate" class="w-full max-w-xs md:max-w-full"
-            [style]="{
-                'color': '#00A54F',
-                'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
-            }">
-            <img [src]="imageUrlFoods" [alt]="'imageAlt' | translate" class="rounded-md mb-4 md:mb-8">
-            <div class="flex justify-end">
-                <app-button (click)="routeToFoodSpecials()" [label]="'home.card.buttons.foodSpecials' | translate"
-                    icon="pi pi-chevron-right"
-                    style="color: white; padding: 8px; background-color: #00A54F; border-radius: 10px;"></app-button>
-            </div>
-        </app-card>
-    </div>
-    <div class="flex justify-center items-center p-4 md:p-16">
-        <app-card [header]="'home.card.heading.liquorSpecials' | translate"
-            [subHeading]="'home.card.subHeading.liquorSpecialsSub' | translate" class="w-full max-w-xs md:max-w-full"
-            [style]="{
-                'color': '#00A54F',
-                'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
-            }">
-            <img [src]="imageUrlLiquor" [alt]="'imageAlt' | translate" class="rounded-md mb-4 md:mb-8">
-            <div class="flex justify-end">
-                <app-button (click)="routeToFoodSpecials()" [label]="'home.card.buttons.liquorSpecials' | translate"
-                    icon="pi pi-chevron-right"
-                    style="color: white; padding: 8px; background-color: #00A54F; border-radius: 10px;"></app-button>
-            </div>
-        </app-card>
-    </div>
-    <div class="flex justify-center items-center p-4 md:p-16">
-        <app-card [header]="'home.card.heading.contact' | translate"
-            [subHeading]="'home.card.subHeading.contactSub' | translate" class="w-full max-w-xs md:max-w-full" [style]="{
-                'color': '#00A54F',
-                'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
-            }">
-            <img [src]="imageUrlContact" [alt]="'imageAlt' | translate" class="rounded-md mb-4 md:mb-8">
-            <div class="flex justify-end">
-                <app-button (click)="routeToContact()" [label]="'home.card.buttons.contact' | translate"
-                    icon="pi pi-chevron-right"
-                    style="color: white; padding: 8px; background-color: #00A54F; border-radius: 10px;"></app-button>
-            </div>
-        </app-card>
-    </div>
+<div
+  class="md:fixed grid grid-cols-1 md:grid-cols-3 justify-center items-center h-screen p-12 pt-0"
+>
+  <div class="flex justify-center items-center p-4 md:p-16">
+    <app-card
+      [header]="'home.card.heading.foodSpecials' | translate"
+      [subHeading]="'home.card.subHeading.foodSpecialsSub' | translate"
+      class="w-full max-w-xs md:max-w-full"
+      [style]="{
+        color: '#00A54F',
+        'box-shadow':
+          '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+      }"
+    >
+      <img
+        [src]="imageUrlFoods"
+        [alt]="'imageAlt' | translate"
+        class="rounded-md mb-4 md:mb-8"
+        loading="lazy"
+      />
+      <div class="flex justify-end">
+        <app-button
+          (click)="routeToFoodSpecials()"
+          [label]="'home.card.buttons.foodSpecials' | translate"
+          icon="pi pi-chevron-right"
+          style="
+            color: white;
+            padding: 8px;
+            background-color: #00a54f;
+            border-radius: 10px;
+          "
+        ></app-button>
+      </div>
+    </app-card>
+  </div>
+  <div class="flex justify-center items-center p-4 md:p-16">
+    <app-card
+      [header]="'home.card.heading.liquorSpecials' | translate"
+      [subHeading]="'home.card.subHeading.liquorSpecialsSub' | translate"
+      class="w-full max-w-xs md:max-w-full"
+      [style]="{
+        color: '#00A54F',
+        'box-shadow':
+          '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+      }"
+    >
+      <img
+        [src]="imageUrlLiquor"
+        [alt]="'imageAlt' | translate"
+        class="rounded-md mb-4 md:mb-8"
+        loading="lazy"
+      />
+      <div class="flex justify-end">
+        <app-button
+          (click)="routeToFoodSpecials()"
+          [label]="'home.card.buttons.liquorSpecials' | translate"
+          icon="pi pi-chevron-right"
+          style="
+            color: white;
+            padding: 8px;
+            background-color: #00a54f;
+            border-radius: 10px;
+          "
+        ></app-button>
+      </div>
+    </app-card>
+  </div>
+  <div class="flex justify-center items-center p-4 md:p-16">
+    <app-card
+      [header]="'home.card.heading.contact' | translate"
+      [subHeading]="'home.card.subHeading.contactSub' | translate"
+      class="w-full max-w-xs md:max-w-full"
+      [style]="{
+        color: '#00A54F',
+        'box-shadow':
+          '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+      }"
+    >
+      <img
+        [src]="imageUrlContact"
+        [alt]="'imageAlt' | translate"
+        class="rounded-md mb-4 md:mb-8"
+        loading="lazy"
+      />
+      <div class="flex justify-end">
+        <app-button
+          (click)="routeToContact()"
+          [label]="'home.card.buttons.contact' | translate"
+          icon="pi pi-chevron-right"
+          style="
+            color: white;
+            padding: 8px;
+            background-color: #00a54f;
+            border-radius: 10px;
+          "
+        ></app-button>
+      </div>
+    </app-card>
+  </div>
 </div>

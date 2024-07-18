@@ -4,7 +4,6 @@ import { CardComponent } from '../../shared/components/card/card.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { environment } from '@environments/environment';
 
-
 @Component({
   selector: 'app-staff',
   standalone: true,
@@ -14,7 +13,7 @@ import { environment } from '@environments/environment';
 export class StaffComponent implements OnInit {
   ownerUrl = '';
   managerUrl = '';
-  test = 'ß'
+  test = 'ß';
 
   azureBlobService = inject(BlobService);
 

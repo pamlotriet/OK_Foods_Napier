@@ -1,12 +1,20 @@
-<p-carousel [value]="products" [numVisible]="3" [numScroll]="3" [circular]="true" [numVisible]="5"
-    [responsiveOptions]="responsiveOptions">
-    <ng-template let-product pTemplate="item">
-        <div class="border-1 surface-border border-round m-2 p-3 shadow-md">
-            <div class="mb-3">
-                <div class="relative mx-auto">
-                    <img [src]="product" [alt]="'imageAlt' | translate" />
-                </div>
-            </div>
+<p-carousel
+  [value]="products"
+  [numVisible]="3"
+  [numScroll]="3"
+  [circular]="true"
+  [numVisible]="5"
+  [responsiveOptions]="responsiveOptions"
+>
+  <ng-template let-product pTemplate="item">
+    <div
+      class="border-1 surface-border border-round m-2 p-3 shadow-md bg-white"
+    >
+      <div class="mb-3">
+        <div class="relative mx-auto">
+          <img [src]="product" [alt]="'imageAlt' | translate" loading="lazy" />
         </div>
-    </ng-template>
+      </div>
+    </div>
+  </ng-template>
 </p-carousel>
