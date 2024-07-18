@@ -50,7 +50,13 @@ jobs:
           CONTACT_IMAGE_NAME: ${{ secrets.CONTACT_IMAGE_NAME }}
           LOGO_NAME: ${{ secrets.LOGO_NAME }}
 
+      - name: Build Application
+        working-directory: ./ok-foods
+        run: |
+          npm run build
+
       - name: Build And Deploy
+
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
