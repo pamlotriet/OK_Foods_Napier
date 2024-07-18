@@ -28,9 +28,7 @@ jobs:
 
       - name: Change Directory and Install Dependencies
         working-directory: ./ok-foods # Change the working directory
-        run: |
-          nvm install 18.18.0 
-          nvm use 18.18.0      
+        run: |   
           npm install
 
       - name: Generate Environment File
