@@ -4,7 +4,8 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ButtonComponent } from '../../shared/components/button/button.component';
 import { BlobService } from '../../shared/services/blob-service';
 import { Router } from '@angular/router';
-import { environment } from '../../../envitonments/environment';
+import { environment } from '@environments/environment';
+
 
 @Component({
   selector: 'app-home-page',

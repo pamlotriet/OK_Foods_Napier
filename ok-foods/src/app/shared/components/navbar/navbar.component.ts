@@ -2,7 +2,7 @@ import { Component, HostListener, inject, OnInit } from '@angular/core';
 import { SideBarComponent } from '../side-bar/side-bar.component';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { environment } from '../../../../envitonments/environment';
+import { environment } from '@environments/environment';
 import { BlobService } from '../../services/blob-service';
 
 @Component({

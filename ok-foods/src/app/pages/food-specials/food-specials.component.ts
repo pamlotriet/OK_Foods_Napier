@@ -2,7 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { BlobService } from '../../shared/services/blob-service';
 import { CardComponent } from '../../shared/components/card/card.component';
 import { TranslateModule } from '@ngx-translate/core';
-import { environment } from '../../../envitonments/environment';
+import { environment } from '@environments/environment';
 import { CarouselComponent } from '../../shared/components/carousel/carousel.component';
 
 @Component({
