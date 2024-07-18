@@ -14,6 +14,7 @@ import { environment } from '@environments/environment';
 export class StaffComponent implements OnInit {
   ownerUrl = '';
   managerUrl = '';
+  test = 'ß'
 
   azureBlobService = inject(BlobService);
 
