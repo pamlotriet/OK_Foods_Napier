@@ -31,7 +31,7 @@ jobs:
 
       - name: Generate Environment File
         run: |
-          cd ok-foods-napier/ok-foods
+          cd ok-foods
           node ../generate-env.js
         env:
           NODE_ENV: production
