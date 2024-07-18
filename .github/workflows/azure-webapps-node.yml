@@ -55,6 +55,11 @@ jobs:
         run: |
           npm run build
 
+      - name: List Build Output
+        run: |
+          cd ok-foods/dist/ok-foods
+          ls -la
+
       - name: Build And Deploy
 
         id: builddeploy
