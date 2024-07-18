@@ -31,7 +31,6 @@ jobs:
 
       - name: Generate Environment File
         run: |
-          cd $GITHUB_WORKSPACE/ok-foods-napier
           ls -la  # (Optional) List files to verify the location
           node generate-env.js
         env:
