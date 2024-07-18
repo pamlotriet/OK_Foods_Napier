@@ -5,6 +5,7 @@
       [routerLinkActiveOptions]="{ exact: true }"
       routerLink=""
       class="m-2 p-2 rounded-lg cursor-pointer"
+      (click)="toggleSideBar()"
     >
       <a>{{ "sidebar.home" | translate }}</a>
     </li>
@@ -12,6 +13,7 @@
       routerLinkActive="active"
       routerLink="/food-specials"
       class="m-2 p-2 rounded-lg cursor-pointer"
+      (click)="toggleSideBar()"
     >
       <a>{{ "sidebar.foodSpecials" | translate }}</a>
     </li>
@@ -19,6 +21,7 @@
       routerLinkActive="active"
       routerLink="/staff"
       class="m-2 p-2 rounded-lg cursor-pointer"
+      (click)="toggleSideBar()"
     >
       <a>{{ "sidebar.staff" | translate }}</a>
     </li>
@@ -26,6 +29,7 @@
       routerLinkActive="active"
       routerLink="/contact"
       class="m-2 p-2 rounded-lg cursor-pointer"
+      (click)="toggleSideBar()"
     >
       <a>{{ "sidebar.contact" | translate }}</a>
     </li>
