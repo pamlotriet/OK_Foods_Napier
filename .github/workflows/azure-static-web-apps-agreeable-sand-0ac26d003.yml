@@ -31,8 +31,9 @@ jobs:
 
       - name: Generate Environment File
         run: |
-          cd ok-foods
-          node ../generate-env.js
+          cd $GITHUB_WORKSPACE/ok-foods-napier/ok-foods
+          ls -la  # (Optional) List files to verify the location
+          node generate-env.js
         env:
           NODE_ENV: production
           FOOD_SPECIALS_SAS: ${{ secrets.FOOD_SPECIALS_SAS }}
