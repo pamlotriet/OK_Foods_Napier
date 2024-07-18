@@ -24,10 +24,10 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "14"
-          working-directory: ok-foods-napier/ok-foods
+          working-directory: ./ok-foods
 
       - name: Change Directory and Install Dependencies
-        working-directory: ok-foods-napier/ok-foods # Change the working directory
+        working-directory: ./ok-foods # Change the working directory
         run: |
           npm install
 
