@@ -37,18 +37,18 @@ jobs:
           node generate-env.js
         env:
           NODE_ENV: production
-          FOOD_SPECIALS_SAS: ${{ secrets.FOOD_SPECIALS_SAS }}
-          FOOD_SPECIALS_URL: ${{ secrets.FOOD_SPECIALS_URL }}
-          LIQUOR_SPECIALS_SAS: ${{ secrets.LIQUOR_SPECIALS_SAS }}
-          LIQUOR_SPECIALS_URL: ${{ secrets.LIQUOR_SPECIALS_URL }}
-          GENERAL_SAS: ${{ secrets.GENERAL_SAS }}
-          GENERAL_URL: ${{ secrets.GENERAL_URL }}
-          OWNER_NAME: ${{ secrets.OWNER_NAME }}
-          MANAGER_NAME: ${{ secrets.MANAGER_NAME }}
-          FOOD_IMAGE_NAME: ${{ secrets.FOOD_IMAGE_NAME }}
-          LIQUOR_IMAGE_NAME: ${{ secrets.LIQUOR_IMAGE_NAME }}
-          CONTACT_IMAGE_NAME: ${{ secrets.CONTACT_IMAGE_NAME }}
-          LOGO_NAME: ${{ secrets.LOGO_NAME }}
+          foodSpecialsSas: ${{ secrets.FOOD_SPECIALS_SAS }}
+          foodSpecialsUrl: ${{ secrets.FOOD_SPECIALS_URL }}
+          liquorSpecialsSas: ${{ secrets.LIQUOR_SPECIALS_SAS }}
+          liquorSpecialsUrl: ${{ secrets.LIQUOR_SPECIALS_URL }}
+          generalSas: ${{ secrets.GENERAL_SAS }}
+          generalUrl: ${{ secrets.GENERAL_URL }}
+          ownerName: ${{ secrets.OWNER_NAME }}
+          managerName: ${{ secrets.MANAGER_NAME }}
+          foodImageName: ${{ secrets.FOOD_IMAGE_NAME }}
+          liquorImageName: ${{ secrets.LIQUOR_IMAGE_NAME }}
+          contactImageName: ${{ secrets.CONTACT_IMAGE_NAME }}
+          logoName: ${{ secrets.LOGO_NAME }}
 
       - name: Build Application
         working-directory: ./ok-foods

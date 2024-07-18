@@ -1,18 +1,18 @@
 function generateEnvironmentContent() {
   return `export const environment = {
-    production: ${process.env.NODE_ENV === 'production'},
-    foodSpecialsSas: '${process.env.FOOD_SPECIALS_SAS || ""}',
-    foodSpecialsUrl: '${process.env.FOOD_SPECIALS_URL || ""}',
-    liquorSpecialsSas: '${process.env.LIQUOR_SPECIALS_SAS || ""}',
-    liquorSpecialsUrl: '${process.env.LIQUOR_SPECIALS_URL || ""}',
-    generalSas: '${process.env.GENERAL_SAS || ""}',
-    generalUrl: '${process.env.GENERAL_URL || ""}',
-    ownerName: '${process.env.OWNER_NAME || ""}',
-    managerName: '${process.env.MANAGER_NAME || ""}',
-    foodImageName: '${process.env.FOOD_IMAGE_NAME || ""}',
-    liquorImageName: '${process.env.LIQUOR_IMAGE_NAME || ""}',
-    contactImageName: '${process.env.CONTACT_IMAGE_NAME || ""}',
-    logoName: '${process.env.LOGO_NAME || ""}',
+    production: ${process.env.NODE_ENV === "production"},
+    foodSpecialsSas: '${process.env.foodSpecialsSas || ""}',
+    foodSpecialsUrl: '${process.env.foodSpecialsUrl || ""}',
+    liquorSpecialsSas: '${process.env.liquorSpecialsSas || ""}',
+    liquorSpecialsUrl: '${process.env.liquorSpecialsUrl || ""}',
+    generalSas: '${process.env.generalSas || ""}',
+    generalUrl: '${process.env.generalUrl || ""}',
+    ownerName: '${process.env.ownerName || ""}',
+    managerName: '${process.env.managerName || ""}',
+    foodImageName: '${process.env.foodImageName || ""}',
+    liquorImageName: '${process.env.liquorImageName || ""}',
+    contactImageName: '${process.env.contactImageName || ""}',
+    logoName: '${process.env.logoName || ""}',
   };`;
 }
 
