@@ -1,0 +1,75 @@
+name: Azure Static Web Apps CI/CD
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - master
+
+jobs:
+  build_and_deploy_job:
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    runs-on: ubuntu-latest
+    name: Build and Deploy Job
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+          lfs: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+          working-directory: ./ok-foods
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Generate Environment File
+        run: |
+          ls -la  # (Optional) List files to verify the location
+          node generate-env.js
+        env:
+          NODE_ENV: production
+          FOOD_SPECIALS_SAS: ${{ secrets.FOOD_SPECIALS_SAS }}
+          FOOD_SPECIALS_URL: ${{ secrets.FOOD_SPECIALS_URL }}
+          LIQUOR_SPECIALS_SAS: ${{ secrets.LIQUOR_SPECIALS_SAS }}
+          LIQUOR_SPECIALS_URL: ${{ secrets.LIQUOR_SPECIALS_URL }}
+          GENERAL_SAS: ${{ secrets.GENERAL_SAS }}
+          GENERAL_URL: ${{ secrets.GENERAL_URL }}
+          OWNER_NAME: ${{ secrets.OWNER_NAME }}
+          MANAGER_NAME: ${{ secrets.MANAGER_NAME }}
+          FOOD_IMAGE_NAME: ${{ secrets.FOOD_IMAGE_NAME }}
+          LIQUOR_IMAGE_NAME: ${{ secrets.LIQUOR_IMAGE_NAME }}
+          CONTACT_IMAGE_NAME: ${{ secrets.CONTACT_IMAGE_NAME }}
+          LOGO_NAME: ${{ secrets.LOGO_NAME }}
+
+      - name: Build And Deploy
+        id: builddeploy
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_AGREEABLE_SAND_0AC26D003 }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
+          action: "upload"
+          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
+          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
+          app_location: "./ok-foods" # App source code path
+          api_location: "" # Api source code path - optional
+          output_location: "{angular.json#Object.values(data.projects)[0].architect.build.options.outputPath}" # Built app content directory - optional
+          ###### End of Repository/Build Configurations ######
+
+  close_pull_request_job:
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    name: Close Pull Request Job
+    steps:
+      - name: Close Pull Request
+        id: closepullrequest
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_AGREEABLE_SAND_0AC26D003 }}
+          action: "close"
