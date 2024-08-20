@@ -1,10 +1,10 @@
 <div class="flex flex-col md:flex-col p-4 md:p-16 w-full">
   <div class="flex flex-col p-4 md:p-16 pb-0">
     <h1 class="text-lg md:text-2xl text-left">
-      {{ "staff.heading" | translate }}
+      {{ staffHeading }}
     </h1>
     <h2 class="text-md md:text-xl text-left">
-      {{ "staff.subHeading" | translate }}
+      {{ staffSubHeading }}
     </h2>
   </div>
   <div
@@ -21,19 +21,19 @@
         <div class="flex flex-col justify-center items-center">
           <img
             [src]="ownerUrl"
-            [alt]="'imageAlt' | translate"
+            [alt]="'imageAlt'"
             class="rounded-full h-32 md:h-52 mb-4 md:mb-8"
             loading="lazy"
           />
           <h3 class="text-lg md:text-xl text-center w-full">
-            {{ "staff.owner.name" | translate }}
+            {{ ownerNameConst }}
           </h3>
           <h2 class="text-md md:text-lg text-center">
-            {{ "staff.owner.title" | translate }}
+            {{ ownerTitle }}
           </h2>
         </div>
         <p class="md:text-justify mt-4 text-sm md:text-base">
-          {{ "staff.owner.info" | translate }}
+          {{ ownerInfo }}
         </p>
       </app-card>
     </div>
@@ -48,19 +48,19 @@
         <div class="flex flex-col justify-center items-center">
           <img
             [src]="managerUrl"
-            [alt]="'imageAlt' | translate"
+            [alt]="'imageAlt'"
             class="rounded-full h-32 md:h-52 mb-4 md:mb-8"
             loading="lazy"
           />
           <h3 class="text-lg md:text-xl text-center w-full">
-            {{ "staff.manager.name" | translate }}
+            {{ managerNameConst }}
           </h3>
           <h2 class="text-md md:text-lg text-center">
-            {{ "staff.manager.title" | translate }}
+            {{ managerTitle }}
           </h2>
         </div>
         <p class="text-justify mt-4 text-sm md:text-base">
-          {{ "staff.manager.info" | translate }}
+          {{ managerInfo }}
         </p>
       </app-card>
     </div>

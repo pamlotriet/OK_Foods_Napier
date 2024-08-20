@@ -3,8 +3,8 @@
 >
   <div class="flex justify-center items-center p-4 md:p-16">
     <app-card
-      [header]="'home.card.heading.foodSpecials' | translate"
-      [subHeading]="'home.card.subHeading.foodSpecialsSub' | translate"
+      [header]="foodSpecialsCardHeading"
+      [subHeading]="foodSpecialsCardSubHeading"
       class="w-full max-w-xs md:max-w-full"
       [style]="{
         color: '#00A54F',
@@ -14,14 +14,14 @@
     >
       <img
         [src]="imageUrlFoods"
-        [alt]="'imageAlt' | translate"
+        [alt]="'imageAlt'"
         class="rounded-md mb-4 md:mb-8"
         loading="lazy"
       />
       <div class="flex justify-end">
         <app-button
           (click)="routeToFoodSpecials()"
-          [label]="'home.card.buttons.foodSpecials' | translate"
+          [label]="foodSpecialsButtonText"
           icon="pi pi-chevron-right"
           style="
             color: white;
@@ -35,8 +35,8 @@
   </div>
   <div class="flex justify-center items-center p-4 md:p-16">
     <app-card
-      [header]="'home.card.heading.liquorSpecials' | translate"
-      [subHeading]="'home.card.subHeading.liquorSpecialsSub' | translate"
+      [header]="liquorSpecialsCardHeading"
+      [subHeading]="liquorSpecialsCardSubHeading"
       class="w-full max-w-xs md:max-w-full"
       [style]="{
         color: '#00A54F',
@@ -46,14 +46,14 @@
     >
       <img
         [src]="imageUrlLiquor"
-        [alt]="'imageAlt' | translate"
+        [alt]="'imageAlt'"
         class="rounded-md mb-4 md:mb-8"
         loading="lazy"
       />
       <div class="flex justify-end">
         <app-button
           (click)="routeToFoodSpecials()"
-          [label]="'home.card.buttons.liquorSpecials' | translate"
+          [label]="liquorSpecialsButtonText"
           icon="pi pi-chevron-right"
           style="
             color: white;
@@ -67,8 +67,8 @@
   </div>
   <div class="flex justify-center items-center p-4 md:p-16">
     <app-card
-      [header]="'home.card.heading.contact' | translate"
-      [subHeading]="'home.card.subHeading.contactSub' | translate"
+      [header]="contactCardHeading"
+      [subHeading]="contactUsCardSubHeading"
       class="w-full max-w-xs md:max-w-full"
       [style]="{
         color: '#00A54F',
@@ -78,14 +78,14 @@
     >
       <img
         [src]="imageUrlContact"
-        [alt]="'imageAlt' | translate"
+        [alt]="'imageAlt'"
         class="rounded-md mb-4 md:mb-8"
         loading="lazy"
       />
       <div class="flex justify-end">
         <app-button
           (click)="routeToContact()"
-          [label]="'home.card.buttons.contact' | translate"
+          [label]="contactUsButtonText"
           icon="pi pi-chevron-right"
           style="
             color: white;

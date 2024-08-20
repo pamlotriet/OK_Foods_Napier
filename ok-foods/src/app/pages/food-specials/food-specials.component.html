@@ -7,11 +7,11 @@
       (keyup)="toggleViewAll('')"
     >
       <i class="pi pi-chevron-left text-xs"></i>
-      <h4 class="pl-2">{{ "foodSpecials.back" | translate }}</h4>
+      <h4 class="pl-2">{{ backButtonText}}</h4>
     </div>
   }
-  <h1>{{ "foodSpecials.heading" | translate }}</h1>
-  <h2>{{ "foodSpecials.subHeading" | translate }}</h2>
+  <h1>{{ specialsHeading}}</h1>
+  <h2>{{specialsSubHeading}}</h2>
 </div>
 @if (!viewAll) {
   <div class="w-full p-4 md:p-16">
@@ -19,7 +19,7 @@
       <div
         class="flex w-full flex-row pb-2 md:pl-16 col-span-2 cursor-pointer items-center"
       >
-        <h5 class="pr-2">{{ "foodSpecials.foodSpecials" | translate }}</h5>
+        <h5 class="pr-2">{{ foodSpecialsHeading }}</h5>
       </div>
       <div
         class="flex w-full flex-row-reverse pb-2 cursor-pointer items-center md:pr-16"
@@ -27,7 +27,7 @@
         (keyup)="toggleViewAll('food')"
       >
         <i class="pi pi-chevron-right text-xs"></i>
-        <h2 class="pr-2">{{ "foodSpecials.viewAll" | translate }}</h2>
+        <h2 class="pr-2">{{ viewButtonText}}</h2>
       </div>
     </div>
     <div class="flex flex-col mb-16">
@@ -37,7 +37,7 @@
       <div
         class="flex flex-row pb-2 col-span-2 cursor-pointer items-center md:pl-16"
       >
-        <h5 class="pr-2">{{ "foodSpecials.liquorSpecials" | translate }}</h5>
+        <h5 class="pr-2">{{liquorSpecialsHeading }}</h5>
       </div>
       <div
         class="flex flex-row-reverse pb-2 cursor-pointer items-center md:pr-16"
@@ -45,7 +45,7 @@
         (keyup)="toggleViewAll('alc')"
       >
         <i class="pi pi-chevron-right text-xs"></i>
-        <h2 class="pr-2">{{ "foodSpecials.viewAll" | translate }}</h2>
+        <h2 class="pr-2">{{ viewButtonText }}</h2>
       </div>
     </div>
     <div class="flex flex-col mb-16">
@@ -68,7 +68,7 @@
         <img
           [src]="blob"
           class="shadow-none"
-          [alt]="'imageAlt' | translate"
+          [alt]="'imageAlt'"
           loading="lazy"
         />
       </app-card>
@@ -90,7 +90,7 @@
         <img
           [src]="blob"
           class="shadow-none"
-          [alt]="'imageAlt' | translate"
+          [alt]="'imageAlt'"
           loading="lazy"
         />
       </app-card>

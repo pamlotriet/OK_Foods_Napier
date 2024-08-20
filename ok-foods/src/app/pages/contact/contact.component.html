@@ -1,6 +1,6 @@
 <div class="flex p-4 md:p-16 flex-col md:pb-0">
-  <h1 class="text-lg md:text-2xl">{{ "contact.heading" | translate }}</h1>
-  <h2 class="text-md md:text-xl">{{ "contact.subHeading" | translate }}</h2>
+  <h1 class="text-lg md:text-2xl">{{ contactHeading }}</h1>
+  <h2 class="text-md md:text-xl">{{ contactSubheading }}</h2>
 </div>
 
 <div class="grid md:grid-cols-2 gap-8 p-4 md:p-16 sm:pt-4">
@@ -11,10 +11,10 @@
         'box-shadow':
           '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
       }"
-      [header]="'contact.heading' | translate"
+      [header]="contactHeading"
     >
       <ul class="flex flex-col w-full h-full">
-        @for (item of sContactContent(); track item) {
+        @for (item of contactInfo; track item) {
           <li class="p-2 flex flex-row items-center">
             <i [class]="item.icon" class="text-xl md:text-2xl pr-4"></i>
             <h4 class="text-sm md:text-base">{{ item.text }}</h4>
@@ -23,8 +23,8 @@
         <div class="flex mt-4">
           <app-button
             (click)="navigateToDirections()"
-            [label]="'contact.button.text' | translate"
-            [icon]="'contact.button.icon' | translate"
+            [label]="buttonInfo[0].text"
+            [icon]="buttonInfo[0].icon"
             style="
               color: white;
               padding: 8px;
@@ -45,10 +45,10 @@
         'box-shadow':
           '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
       }"
-      [header]="'contact.tradingHeading' | translate"
+      [header]="tradingHoursHeading"
     >
       <ul class="flex flex-col">
-        @for (timestamp of sTradingHourContent(); track timestamp) {
+        @for (timestamp of tradingHours; track timestamp) {
           <div class="flex flex-row">
             <li class="p-2 flex flex-row">
               <h4 class="text-sm md:text-base">{{ timestamp.day }}:</h4>

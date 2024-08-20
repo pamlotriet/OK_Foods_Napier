@@ -1,19 +1,28 @@
-import { Component, inject } from '@angular/core';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Component } from '@angular/core';
 import { CardComponent } from '../../shared/components/card/card.component';
-import { toSignal } from '@angular/core/rxjs-interop';
 import { ButtonComponent } from '../../shared/components/button/button.component';
+import {
+  contactHeading,
+  tradingHoursHeading,
+  tradingHours,
+  contactInfo,
+  buttonInfo,
+  contactSubheading,
+} from 'app/shared/constants/contact.constants';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [TranslateModule, CardComponent, ButtonComponent],
+  imports: [CardComponent, ButtonComponent],
   templateUrl: './contact.component.html',
 })
 export class ContactComponent {
-  translate = inject(TranslateService);
-  sTradingHourContent = toSignal(this.translate.get('contact.tradingHours'));
-  sContactContent = toSignal(this.translate.get('contact.contactInfo'));
+  contactHeading = contactHeading;
+  contactSubheading = contactSubheading;
+  tradingHoursHeading = tradingHoursHeading;
+  tradingHours = tradingHours;
+  contactInfo = contactInfo;
+  buttonInfo = buttonInfo;
 
   navigateToDirections() {
     window.location.href =

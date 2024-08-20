@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { buttonTexts } from 'app/shared/constants/navbar.constants';
 import { ButtonModule } from 'primeng/button';
 import { SidebarModule } from 'primeng/sidebar';
 
@@ -15,11 +16,10 @@ import { SidebarModule } from 'primeng/sidebar';
     TranslateModule,
   ],
   templateUrl: './side-bar.component.html',
-  styleUrl: './side-bar.component.css',
 })
 export class SideBarComponent {
   sidebarVisible = false;
-
+  buttontexts = buttonTexts;
   toggleSideBar() {
     this.sidebarVisible = !this.sidebarVisible;
   }

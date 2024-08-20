@@ -1,0 +1,10 @@
+export const mainHeading = 'Napier';
+export const foodSpecialsCardHeading = 'Food Specials';
+export const liquorSpecialsCardHeading = 'Liquor Specials';
+export const contactCardHeading = 'Contact Us';
+export const foodSpecialsCardSubHeading = 'View our food specials';
+export const liquorSpecialsCardSubHeading = 'View our liquor specials';
+export const contactUsCardSubHeading = 'Get in touch with us';
+export const foodSpecialsButtonText = 'View';
+export const liquorSpecialsButtonText = 'View';
+export const contactUsButtonText = 'Contact Us';

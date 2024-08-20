@@ -1,13 +1,13 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { BlobService } from '../../shared/services/blob-service';
 import { CardComponent } from '../../shared/components/card/card.component';
-import { TranslateModule } from '@ngx-translate/core';
 import { environment } from '@environments/environment';
+import { staffHeading, staffSubHeading, ownerName, ownerTitle, ownerInfo, managerName, managerTitle, managerInfo } from 'app/shared/constants/staff.constants';
 
 @Component({
   selector: 'app-staff',
   standalone: true,
-  imports: [CardComponent, TranslateModule],
+  imports: [CardComponent],
   templateUrl: './staff.component.html',
 })
 export class StaffComponent implements OnInit {
@@ -21,6 +21,15 @@ export class StaffComponent implements OnInit {
   private containerSas = environment.generalSas;
   private ownerName = environment.ownerName;
   private managerName = environment.managerName;
+
+  staffHeading = staffHeading;
+  staffSubHeading = staffSubHeading;
+  ownerNameConst = ownerName;
+  ownerTitle = ownerTitle;
+  ownerInfo = ownerInfo;
+  managerNameConst = managerName;
+  managerTitle = managerTitle;
+  managerInfo = managerInfo;
 
   ngOnInit(): void {
     this.azureBlobService

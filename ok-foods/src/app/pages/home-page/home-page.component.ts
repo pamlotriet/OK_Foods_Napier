@@ -5,6 +5,18 @@ import { ButtonComponent } from '../../shared/components/button/button.component
 import { BlobService } from '../../shared/services/blob-service';
 import { Router } from '@angular/router';
 import { environment } from '@environments/environment';
+import {
+  contactCardHeading,
+  contactUsButtonText,
+  foodSpecialsButtonText,
+  foodSpecialsCardHeading,
+  foodSpecialsCardSubHeading,
+  liquorSpecialsButtonText,
+  liquorSpecialsCardHeading,
+  liquorSpecialsCardSubHeading,
+  contactUsCardSubHeading,
+  mainHeading,
+} from 'app/shared/constants/home.constants';
 
 @Component({
   selector: 'app-home-page',
@@ -25,6 +37,18 @@ export class HomePageComponent implements OnInit {
   private foodImageName = environment.foodImageName;
   private liquorImageName = environment.liquorImageName;
   private contactImageName = environment.contactImageName;
+
+  // Use the imported constants
+  mainHeading = mainHeading;
+  foodSpecialsCardHeading = foodSpecialsCardHeading;
+  liquorSpecialsCardHeading = liquorSpecialsCardHeading;
+  contactCardHeading = contactCardHeading;
+  foodSpecialsCardSubHeading = foodSpecialsCardSubHeading;
+  liquorSpecialsCardSubHeading = liquorSpecialsCardSubHeading;
+  contactUsCardSubHeading = contactUsCardSubHeading;
+  foodSpecialsButtonText = foodSpecialsButtonText;
+  liquorSpecialsButtonText = liquorSpecialsButtonText;
+  contactUsButtonText = contactUsButtonText;
 
   ngOnInit(): void {
     this.azureBlobService

@@ -1,12 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 import { ResponsiveOption } from '../../models/responsive-options';
-import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-carousel',
   standalone: true,
-  imports: [CarouselModule, TranslateModule],
+  imports: [CarouselModule],
   templateUrl: './carousel.component.html',
 })
 export class CarouselComponent implements OnInit {

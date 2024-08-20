@@ -1,5 +1,3 @@
-<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
-<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
 @if (isMobile) {
   <div
     class="grid grid-cols-2 w-screen h-fit p-4 pl-6 pr-6 shadow-md top-0 sticky z-10 bg-white"
@@ -9,7 +7,7 @@
         (click)="routeHome()"
         class="h-8 md:h-10 cursor-pointer"
         [src]="imageUrl"
-        [alt]="'imageAlt' | translate"
+        [alt]="'imageAlt'"
         loading="lazy"
       />
     </div>
@@ -27,7 +25,7 @@
           (click)="routeHome()"
           class="h-8 md:h-10 cursor-pointer"
           [src]="imageUrl"
-          [alt]="'imageAlt' | translate"
+          [alt]="'imageAlt'"
           loading="lazy"
         />
       </div>
@@ -35,33 +33,19 @@
     <div class="flex col-span-1 items-center font-medium font-roboto">
       <div class="flex flex-row-reverse items-center w-full">
         <ul class="flex flex-row">
-          <li class="m-2 p-1">
-            <a
-              routerLinkActive="border-b-4 border-green"
-              [routerLinkActiveOptions]="{ exact: true }"
-              routerLink=""
-              >{{ "sidebar.home" | translate }}</a
-            >
-          </li>
-          <li class="m-2 p-1">
-            <a
-              routerLinkActive="border-b-4 border-green"
-              routerLink="/food-specials"
-              >{{ "sidebar.foodSpecials" | translate }}</a
-            >
-          </li>
-          <li class="m-2 p-1">
-            <a routerLinkActive="border-b-4 border-green" routerLink="/staff">{{
-              "sidebar.staff" | translate
-            }}</a>
-          </li>
-          <li class="m-2 p-1">
-            <a
-              routerLinkActive="border-b-4 border-green"
-              routerLink="/contact"
-              >{{ "sidebar.contact" | translate }}</a
-            >
-          </li>
+          @for (item of buttontexts; track item) {
+            <li class="m-2 p-1">
+              <a
+                routerLinkActive="border-b-4 border-green"
+                [routerLinkActiveOptions]="{
+                  exact: item.key === 'homeButtonText',
+                }"
+                [routerLink]="item.routerLink"
+              >
+                {{ item.value }}
+              </a>
+            </li>
+          }
         </ul>
       </div>
     </div>
