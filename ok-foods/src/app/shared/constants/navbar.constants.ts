@@ -3,4 +3,5 @@ export const buttonTexts = [
   { key: 'specialsButtonText', value: 'Specials', routerLink: 'food-specials' },
   { key: 'staffButtonText', value: 'Staff', routerLink: 'staff' },
   { key: 'contactButtonText', value: 'Contact', routerLink: 'contact' },
+  { key: 'updates', value: 'Updates', routerLink: 'updates' },
 ];

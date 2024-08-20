@@ -1,0 +1,15 @@
+<div
+  class="flex flex-col w-3/4 justify-center items-center min-h-screen mx-auto mt-16"
+>
+  @for (item of mockUpdates; track item) {
+    <app-card
+      [header]="item.heading"
+      [subHeading]="item.date"
+      classElements="m-4"
+    >
+      <div class="flex justify-center items-center">
+        <p>{{ item.value }}</p>
+      </div>
+    </app-card>
+  }
+</div>
